@@ -3,7 +3,7 @@ Atom highlighting for ZenScript used in [MineTweaker](https://github.com/stanheb
 
 It is a port of my [Sublime ZenScript-Highlighter](https://github.com/way2muchnoise/ZenScript-Highlighter)
 
-The package can be found on [atom.op](https://atom.io/packages/ZenScript).
+The package can be found on [atom.io](https://atom.io/packages/ZenScript).
 
 Feel free to PR, fork or redistribute.
 
