@@ -1,0 +1,114 @@
+'scopeName': 'plain.text.zs'
+'name': 'Zen Script'
+'fileTypes': [
+  'zs'
+]
+'patterns': [
+  {
+    'name': 'string.quoted.double.zs'
+    'match': '\\".*?\\"'
+  },
+  {
+    'name': 'invalid.illegal.stray-bracket-end'
+    'match': '\\"'
+  },
+  {
+    'name': 'storage.type.zs'
+    'match': '\\b(var|byte)\\b'
+  }
+  {
+    'name': 'keyword.control.zs'
+    'match': '^import (.*?)(?=;\\n)'
+  },
+  {
+    'name': 'keyword.control.zs'
+    'match': '\\b(print|return|break|case|continue|default|do|while|for|in|switch|if|else)\\b'
+  },
+  {
+    'name': 'keyword.control.zs'
+    'match': '^import (.*?)(?=;\\n)'
+    'captures':
+      '1':
+        'name': 'storage.type.zs'
+  },
+  {
+    'name': 'constant.language.zs'
+    'match': '\\b(true|false|null)\\b'
+  },
+  {
+    'name': 'constant.numeric.zs'
+    'match': '\\b((0(x|X)[0-9a-fA-F]*)|(([0-9]+\\.?[0-9]*)|(\\.[0-9]+))((e|E)(\\+|-)?[0-9]+)?)([LlFfUuDd]|UL|ul)?\\b'
+  },
+  {
+    'name': 'keyword.operator.assignment.zs'
+    'match': '(=)'
+  },
+  {
+    'match': '(\\/\\/.*)|(#.*)'
+    'name': 'comment.line.zs'
+  },
+  {
+    'match': '(\\/\\*(.|\\n)*?\\*\\/)'
+    'name': 'comment.block.zs'
+  },
+  {
+    'name': 'keyword.operator.arithmetic.zs'
+    'match': '(\\-|\\+|\\*|\\/|%)'
+  },
+  {
+    'begin': '\\('
+    'end': '\\)'
+    'include': '$this'
+  },
+  {
+    'begin': '\\['
+    'end': '\\]'
+    'include': '$this'
+  },
+  {
+    'begin': '\\<'
+    'beginCaptures':
+      '0':
+        'name': 'keyword.control.zs'
+    'end': '\\>'
+    'endCapture':
+      '0':
+        'name': 'keyword.control.zs'
+    'patterns': [
+      {
+        'match': '\\b(ore|liquid)(:(.*?)?)(?=>)'
+        'name': 'keyword.other.zs'
+        'captures':
+          '1':
+            'name': 'storage.type.zs'
+          '3':
+            'name' : 'variable.parameter.zs'
+      },
+      {
+        'match': '\\b(.*?)(:(.*?(:(\\d+)?)?)?)(?=>)'
+        'name': 'keyword.other.zs'
+        'captures':
+          '1':
+            'name': 'entity.name.zs'
+          '3':
+            'name': 'variable.parameter.zs'
+          '5':
+            'name': 'constant.numeric.zs'
+      },
+    ]
+  },
+  {
+    'match': '((^([^\\<]*?))|(?<=\\()(.*?))\\.'
+    'name': 'keyword.control.zs'
+    'captures':
+      '1':
+        'name': 'storage.type.zs'
+  },
+  {
+    'match': '\\.'
+    'name': 'keyword.control.zs'
+    'captures':
+      '1':
+        'name': 'storage.type.zs'
+  }
+]

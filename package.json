@@ -1,0 +1,10 @@
+{
+  "name": "ZenScript",
+  "version": "0.2.2",
+  "description": "ZenScript highlighting and completions",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/way2muchnoise/ZenScript-Highlighter-Atom"
+  },
+}
