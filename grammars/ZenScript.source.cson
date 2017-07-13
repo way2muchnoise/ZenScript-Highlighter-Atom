@@ -14,7 +14,7 @@
   },
   {
     'name': 'storage.type.zs'
-    'match': '\\b(var|byte)\\b'
+    'match': '\\b(val|var|byte)\\b'
   }
   {
     'name': 'keyword.control.zs'
